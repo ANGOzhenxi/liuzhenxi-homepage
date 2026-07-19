@@ -4,141 +4,215 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>刘振西 · 个人主页 | 天使投资人 · 技术经理人 · 创业导师</title>
-<meta name="description" content="刘振西：天使投资人、技术经理人、创业导师、管理顾问。把优秀的人才、企业、资源链接到一起，诞生全新的愿景。">
+<meta name="description" content="刘振西：天使投资人、技术经理人、创业导师、管理顾问。把优秀的人才、企业、资源链接到一起，诞生全新的愿景。Base：长沙 / 上海">
 <style>
   :root{
-    --coral:#FF6B35; --coral-soft:#FFE8DC; --teal:#2EC4B6; --teal-soft:#DFF7F4;
-    --yellow:#FFBF69; --yellow-soft:#FFF3DF; --ink:#2B2D42; --gray:#6C7190;
-    --cream:#FFF9F2; --card:#FFFFFF; --line:#F0E7DB;
+    --navy-950:#06182E; --navy-900:#0A2342; --navy-800:#0E2F56; --navy-700:#14406F;
+    --sea-600:#1273B8; --sea-500:#1B8FD6; --sea-400:#3FABE6; --sea-300:#7FC9EF; --sea-100:#E3F2FB;
+    --gold:#E0A93E; --gold-soft:#FBF3E0;
+    --ink:#16283C; --gray:#5A6B7E; --bg:#F4F9FD; --card:#FFFFFF; --line:#DCE8F2;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
-    background:var(--cream); color:var(--ink); line-height:1.7;
+    background:var(--bg); color:var(--ink); line-height:1.75; font-size:16px;
   }
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:var(--sea-600)}
 
-  /* ===== 顶部导航 ===== */
-  nav{position:sticky;top:0;z-index:50;background:rgba(255,249,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
-  nav .brand{font-weight:800;font-size:18px}
-  nav .brand span{color:var(--coral)}
-  nav .links a{margin-left:18px;color:var(--gray);text-decoration:none;font-size:14px}
-  nav .links a:hover{color:var(--coral)}
-  @media(max-width:640px){nav .links{display:none}}
+  /* ============ 导航 ============ */
+  nav{position:sticky;top:0;z-index:60;background:rgba(6,24,46,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(127,201,239,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .brand{font-weight:800;font-size:19px;color:#fff;letter-spacing:2px}
+  nav .brand em{font-style:normal;color:var(--sea-300)}
+  nav .links a{margin-left:22px;color:#B9D6EC;text-decoration:none;font-size:14px;transition:color .2s}
+  nav .links a:hover{color:#fff}
+  @media(max-width:760px){nav .links{display:none}}
 
-  /* ===== Hero ===== */
-  .hero{padding:64px 0 40px;text-align:center;position:relative;overflow:hidden}
-  .hero::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;
-    background:radial-gradient(circle,var(--yellow-soft),transparent 70%);top:-120px;right:-80px;z-index:0}
-  .hero::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;
-    background:radial-gradient(circle,var(--teal-soft),transparent 70%);bottom:-100px;left:-60px;z-index:0}
-  .hero .wrap{position:relative;z-index:1}
-  .avatar{width:110px;height:110px;border-radius:32px;margin:0 auto 20px;
-    background:linear-gradient(135deg,var(--coral),var(--yellow));
-    display:flex;align-items:center;justify-content:center;
-    font-size:40px;font-weight:800;color:#fff;box-shadow:0 12px 28px rgba(255,107,53,.28);
-    transform:rotate(-4deg)}
-  .hero h1{font-size:40px;letter-spacing:2px}
-  .hero .wave{display:inline-block;animation:wave 2.2s infinite;transform-origin:70% 70%}
-  @keyframes wave{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(16deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(14deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(8deg)}}
-  .tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 8px}
-  .tag{padding:6px 16px;border-radius:999px;font-size:14px;font-weight:600}
-  .tag.c{background:var(--coral-soft);color:var(--coral)}
-  .tag.t{background:var(--teal-soft);color:#159e92}
-  .tag.y{background:var(--yellow-soft);color:#c97f1f}
-  .quote{max-width:760px;margin:26px auto 0;background:var(--card);border:2px dashed var(--yellow);
-    border-radius:20px;padding:26px 30px;font-size:16px;text-align:left;position:relative;
-    box-shadow:0 8px 24px rgba(43,45,66,.06)}
-  .quote::before{content:"“";position:absolute;top:-22px;left:20px;font-size:64px;color:var(--coral);font-family:Georgia,serif}
-  .quote p{margin-bottom:10px}
-  .quote .base{text-align:right;font-weight:700;color:var(--coral);font-size:15px}
-  .stats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
-  .stat{background:var(--card);border-radius:16px;padding:14px 24px;box-shadow:0 6px 18px rgba(43,45,66,.06);min-width:120px}
-  .stat b{display:block;font-size:26px;color:var(--coral)}
-  .stat span{font-size:13px;color:var(--gray)}
+  /* ============ Hero ============ */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(900px 480px at 85% -10%, rgba(63,171,230,.35), transparent 60%),
+      radial-gradient(700px 420px at -10% 110%, rgba(18,115,184,.4), transparent 60%),
+      linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 45%, var(--navy-700) 100%);
+    padding:84px 0 120px;
+  }
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
+  .hero .kicker{display:inline-block;padding:6px 16px;border:1px solid rgba(127,201,239,.45);border-radius:999px;
+    font-size:13px;letter-spacing:3px;color:var(--sea-300);margin-bottom:22px}
+  .hero h1{font-size:52px;letter-spacing:6px;line-height:1.2;margin-bottom:10px}
+  .hero h1 span{color:var(--sea-300)}
+  .hero .titles{font-size:17px;color:#CFE6F6;letter-spacing:1px;margin-bottom:26px}
+  .hero .titles b{color:#fff;font-weight:600}
+  .hero .quote{
+    position:relative;background:rgba(255,255,255,.07);border-left:4px solid var(--sea-400);
+    border-radius:0 14px 14px 0;padding:20px 24px;font-size:16px;color:#EAF5FD;margin-bottom:26px;
+  }
+  .hero .quote .hl{color:var(--gold);font-weight:700}
+  .hero .base{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none}
+  .chip.primary{background:linear-gradient(135deg,var(--sea-500),var(--sea-400));color:#fff;box-shadow:0 10px 24px rgba(27,143,214,.35)}
+  .chip.ghost{border:1px solid rgba(127,201,239,.5);color:var(--sea-300)}
+  .hero .photo{position:relative;justify-self:center}
+  .hero .photo .frame{
+    width:300px;border-radius:22px;overflow:hidden;position:relative;
+    box-shadow:0 30px 60px rgba(0,0,0,.45), 0 0 0 1px rgba(127,201,239,.35), 0 0 0 10px rgba(63,171,230,.12);
+    transform:rotate(2deg);transition:transform .4s ease;
+  }
+  .hero .photo .frame:hover{transform:rotate(0)}
+  .hero .photo img{width:100%;display:block}
+  .hero .photo .badge{
+    position:absolute;left:-26px;bottom:26px;background:#fff;color:var(--navy-800);
+    padding:10px 18px;border-radius:14px;font-size:13px;font-weight:700;line-height:1.5;
+    box-shadow:0 14px 30px rgba(0,0,0,.3);transform:rotate(-3deg);
+  }
+  .hero .photo .badge b{display:block;color:var(--sea-600);font-size:17px}
+  .hero .waves{position:absolute;left:0;right:0;bottom:-1px;z-index:1;display:block;width:100%}
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:44px;text-align:center}
+    .hero .base{justify-content:center}
+    .hero h1{font-size:40px}
+    .hero .photo .badge{left:-8px}
+  }
+  @media(max-width:480px){
+    .hero{padding:60px 0 96px}
+    .hero h1{font-size:32px;letter-spacing:3px}
+    .hero .quote{font-size:15px;padding:16px 18px}
+    .sec-head h2{font-size:26px}
+  }
 
-  /* ===== 通用区块 ===== */
-  section{padding:56px 0}
-  .sec-title{text-align:center;margin-bottom:14px;font-size:30px}
-  .sec-sub{text-align:center;color:var(--gray);margin-bottom:40px;font-size:15px}
-  .badge{display:inline-block;background:var(--teal-soft);color:#159e92;border-radius:999px;
-    padding:3px 14px;font-size:13px;font-weight:700;margin-bottom:10px}
+  /* ============ 通用版块 ============ */
+  section{padding:76px 0}
+  .sec-head{text-align:center;margin-bottom:48px}
+  .sec-head .en{font-size:13px;letter-spacing:4px;color:var(--sea-500);font-weight:700;text-transform:uppercase}
+  .sec-head h2{font-size:32px;letter-spacing:2px;color:var(--navy-800);margin:8px 0 10px}
+  .sec-head p{color:var(--gray);max-width:640px;margin:0 auto}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.on{opacity:1;transform:none}
 
-  /* ===== 5个记忆点 ===== */
-  .memory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-  .mem{background:var(--card);border-radius:20px;padding:26px 24px;position:relative;
-    box-shadow:0 8px 22px rgba(43,45,66,.06);transition:transform .25s,box-shadow .25s;border-top:6px solid var(--coral)}
-  .mem:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(43,45,66,.12)}
-  .mem:nth-child(2){border-top-color:var(--teal)}
-  .mem:nth-child(3){border-top-color:var(--yellow)}
-  .mem:nth-child(4){border-top-color:#8E7CF0}
-  .mem:nth-child(5){border-top-color:#F2608A}
-  .mem .no{position:absolute;top:14px;right:18px;font-size:44px;font-weight:800;color:var(--line)}
-  .mem .emoji{font-size:34px}
-  .mem h3{font-size:18px;margin:10px 0 8px}
-  .mem p{font-size:14px;color:var(--gray)}
+  /* ============ 记忆点 ============ */
+  .memory{background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+  .mem-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+  .mem-card{
+    grid-column:span 2;background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:30px 26px;position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .mem-card:nth-child(4){grid-column:2/span 2}
+  .mem-card:nth-child(5){grid-column:4/span 2}
+  .mem-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(10,35,66,.12)}
+  .mem-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(90deg,var(--navy-700),var(--sea-400))}
+  .mem-card .no{position:absolute;top:14px;right:20px;font-size:15px;font-weight:800;color:var(--sea-300);letter-spacing:1px}
+  .mem-card .stat{font-size:38px;font-weight:800;color:var(--navy-800);line-height:1.15;margin-bottom:6px}
+  .mem-card .stat small{font-size:17px;font-weight:700;color:var(--sea-500)}
+  .mem-card .stat.gold{color:var(--gold)}
+  .mem-card h3{font-size:17px;color:var(--ink);margin-bottom:8px;letter-spacing:.5px}
+  .mem-card p{font-size:14px;color:var(--gray)}
+  @media(max-width:900px){.mem-card,.mem-card:nth-child(4),.mem-card:nth-child(5){grid-column:span 3}}
+  @media(max-width:620px){.mem-card,.mem-card:nth-child(4),.mem-card:nth-child(5){grid-column:span 6}}
 
-  /* ===== 时间线 ===== */
-  .timeline{position:relative;margin:0 auto;max-width:760px;padding-left:34px}
-  .timeline::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:3px;
-    background:linear-gradient(var(--coral),var(--yellow),var(--teal));border-radius:3px}
-  .tl-item{position:relative;background:var(--card);border-radius:18px;padding:20px 22px;
-    margin-bottom:18px;box-shadow:0 6px 18px rgba(43,45,66,.05);display:flex;gap:16px;align-items:flex-start}
-  .tl-item::before{content:"";position:absolute;left:-30px;top:26px;width:13px;height:13px;border-radius:50%;
-    background:var(--coral);border:3px solid var(--cream);box-shadow:0 0 0 2px var(--coral)}
-  .tl-item img{width:56px;height:56px;object-fit:contain;border-radius:12px;background:#fff;
-    border:1px solid var(--line);padding:6px;flex-shrink:0}
-  .tl-item .role{font-weight:700;font-size:16px}
-  .tl-item .role a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--yellow)}
-  .tl-item .role a:hover{color:var(--coral)}
-  .tl-item .desc{font-size:14px;color:var(--gray)}
-  .tl-item .years{font-size:12px;color:#fff;background:var(--teal);border-radius:999px;padding:2px 10px;margin-left:8px;white-space:nowrap}
+  /* ============ 职业足迹 ============ */
+  .timeline{position:relative;max-width:860px;margin:0 auto;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;border-radius:3px;
+    background:linear-gradient(180deg,var(--sea-400),var(--navy-700))}
+  .tl-item{position:relative;margin-bottom:34px;background:var(--card);border:1px solid var(--line);
+    border-radius:16px;padding:24px 26px;display:flex;gap:22px;align-items:flex-start;
+    transition:transform .3s ease,box-shadow .3s ease}
+  .tl-item:hover{transform:translateX(6px);box-shadow:0 14px 34px rgba(10,35,66,.1)}
+  .tl-item::before{content:"";position:absolute;left:-32px;top:32px;width:13px;height:13px;border-radius:50%;
+    background:var(--sea-500);box-shadow:0 0 0 5px var(--sea-100)}
+  .tl-logo{flex:0 0 108px;height:64px;background:#fff;border:1px solid var(--line);border-radius:12px;
+    display:flex;align-items:center;justify-content:center;padding:8px}
+  .tl-logo img{max-width:100%;max-height:100%;object-fit:contain}
+  .tl-item h3{font-size:18px;color:var(--navy-800)}
+  .tl-item .role{font-size:14px;color:var(--sea-600);font-weight:600;margin:2px 0 6px}
+  .tl-item p{font-size:14px;color:var(--gray)}
+  .tl-item .go{font-size:12px;color:var(--sea-500);text-decoration:none;font-weight:700;white-space:nowrap;margin-top:6px}
+  @media(max-width:640px){.tl-item{flex-direction:column;gap:12px}.tl-logo{flex-basis:auto;width:140px}}
 
-  /* ===== Logo 墙 ===== */
-  .logo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
-  .logo-card{background:var(--card);border-radius:16px;padding:18px 14px;text-align:center;
-    box-shadow:0 6px 16px rgba(43,45,66,.05);text-decoration:none;color:var(--ink);
-    transition:transform .25s;display:flex;flex-direction:column;align-items:center;gap:10px;border:1px solid transparent}
-  a.logo-card:hover{transform:translateY(-5px);border-color:var(--yellow)}
-  .logo-card img{height:46px;max-width:120px;object-fit:contain}
-  .logo-card .ph{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--yellow));
-    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px}
-  .logo-card b{font-size:14px}
-  .logo-card small{color:var(--gray);font-size:12px}
-  .logo-card .visit{font-size:11px;color:var(--coral);font-weight:700}
+  /* ============ 创业经历 ============ */
+  .ventures{background:linear-gradient(180deg,var(--navy-900),var(--navy-800));color:#fff;position:relative;overflow:hidden}
+  .ventures::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(63,171,230,.18),transparent 65%);top:-160px;right:-120px}
+  .ventures .sec-head h2{color:#fff}
+  .ventures .sec-head p{color:#A9C8E2}
+  .ven-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;position:relative;z-index:1}
+  .ven-card{background:rgba(255,255,255,.06);border:1px solid rgba(127,201,239,.22);border-radius:18px;
+    padding:26px;transition:transform .3s ease,background .3s ease;display:flex;flex-direction:column;gap:14px}
+  .ven-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+  .ven-top{display:flex;align-items:center;gap:16px}
+  .ven-logo{width:64px;height:64px;background:#fff;border-radius:14px;display:flex;align-items:center;
+    justify-content:center;padding:8px;flex:0 0 auto}
+  .ven-logo img{max-width:100%;max-height:100%;object-fit:contain}
+  .ven-logo.initial{background:linear-gradient(135deg,var(--sea-500),var(--sea-300));color:#fff;
+    font-size:24px;font-weight:800}
+  .ven-card .year{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:1px}
+  .ven-card h3{font-size:18px;color:#fff;line-height:1.4}
+  .ven-card .myrole{font-size:13px;color:var(--sea-300);font-weight:700;margin-top:2px}
+  .ven-card p{font-size:14px;color:#C4DBEF}
+  .ven-card .go{font-size:13px;color:var(--sea-300);text-decoration:none;font-weight:700;margin-top:auto}
+  .ven-card .go:hover{color:#fff}
 
-  /* ===== 高光项目 ===== */
-  .hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-  .hl{background:var(--card);border-radius:18px;padding:24px;box-shadow:0 6px 18px rgba(43,45,66,.05);border-left:6px solid var(--teal)}
-  .hl:nth-child(2){border-left-color:var(--coral)}
-  .hl:nth-child(3){border-left-color:var(--yellow)}
-  .hl:nth-child(4){border-left-color:#8E7CF0}
-  .hl h3{font-size:16px;margin-bottom:8px}
-  .hl p{font-size:14px;color:var(--gray)}
+  /* ============ 投资版图 ============ */
+  .roi-banner{max-width:860px;margin:0 auto 40px;background:linear-gradient(135deg,var(--navy-800),var(--sea-600));
+    border-radius:20px;color:#fff;padding:30px 36px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+    box-shadow:0 20px 44px rgba(10,35,66,.2)}
+  .roi-banner .num{font-size:52px;font-weight:800;color:var(--gold);line-height:1}
+  .roi-banner .txt{flex:1;min-width:240px}
+  .roi-banner .txt b{font-size:18px;display:block;margin-bottom:4px}
+  .roi-banner .txt span{font-size:14px;color:#D6EAF9}
+  .pf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+  .pf-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 18px;
+    text-align:center;transition:transform .3s ease,box-shadow .3s ease;text-decoration:none;color:inherit;display:block}
+  .pf-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(10,35,66,.12)}
+  .pf-card .logo{height:58px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .pf-card .logo img{max-width:100%;max-height:100%;object-fit:contain}
+  .pf-card b{font-size:15px;color:var(--navy-800);display:block}
+  .pf-card span{font-size:12px;color:var(--gray)}
+  .pf-card .ext{color:var(--sea-500);font-size:12px;font-weight:700}
 
-  /* ===== 身份徽章 ===== */
-  .chip-wall{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:820px;margin:0 auto}
-  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:14px;
-    box-shadow:0 4px 12px rgba(43,45,66,.04)}
-  .chip b{color:var(--coral)}
+  /* ============ 研究与链接 ============ */
+  .impact{background:#fff}
+  .imp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
+  .imp-card{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--bg);
+    transition:transform .3s ease,box-shadow .3s ease}
+  .imp-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(10,35,66,.1);background:#fff}
+  .imp-card .icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-size:22px;margin-bottom:16px;background:linear-gradient(135deg,var(--navy-700),var(--sea-500));color:#fff}
+  .imp-card h3{font-size:17px;color:var(--navy-800);margin-bottom:4px}
+  .imp-card .when{font-size:13px;color:var(--sea-600);font-weight:700;margin-bottom:10px}
+  .imp-card p{font-size:14px;color:var(--gray)}
+  .imp-card ul{margin:8px 0 0 18px;font-size:14px;color:var(--gray)}
+  .imp-card li{margin-bottom:4px}
 
-  /* ===== Footer ===== */
-  footer{background:var(--ink);color:#fff;padding:56px 0 36px;text-align:center;margin-top:40px}
-  footer .cta{font-size:26px;font-weight:800;margin-bottom:12px}
-  footer .cta span{color:var(--yellow)}
-  footer p{color:#B8BBD9;font-size:14px}
-  footer .foot-links{margin-top:18px}
-  footer .foot-links a{color:var(--yellow);text-decoration:none;margin:0 10px;font-size:14px}
-  footer .copy{margin-top:26px;font-size:12px;color:#8a8db0}
+  /* ============ 结语 / 页脚 ============ */
+  footer{background:linear-gradient(135deg,var(--navy-950),var(--navy-800));color:#fff;padding:70px 0 36px;position:relative;overflow:hidden}
+  footer::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;
+    background:radial-gradient(circle,rgba(63,171,230,.16),transparent 65%);bottom:-180px;left:-140px}
+  footer .wrap{position:relative;z-index:1;text-align:center}
+  footer .quote{max-width:760px;margin:0 auto 26px;font-size:19px;line-height:2;color:#EAF5FD}
+  footer .quote .hl{color:var(--gold);font-weight:700}
+  footer .base{display:inline-block;padding:10px 26px;border:1px solid rgba(127,201,239,.4);border-radius:999px;
+    color:var(--sea-300);font-size:15px;letter-spacing:2px;margin-bottom:34px}
+  footer .nav2{margin-bottom:26px}
+  footer .nav2 a{color:#A9C8E2;text-decoration:none;margin:0 12px;font-size:14px}
+  footer .nav2 a:hover{color:#fff}
+  footer .copy{color:#6E8CA9;font-size:13px}
 
-  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  /* ============ 打印样式（用于 PDF 导出） ============ */
   @media print{
-    nav,.hero::before,.hero::after{display:none}
-    body{background:#fff}
-    section{padding:28px 0}
-    .mem,.tl-item,.logo-card,.hl,.stat,.quote,.chip{box-shadow:none;border:1px solid var(--line)}
+    nav,.chip,.hero .waves,footer .nav2{display:none!important}
+    body{background:#fff;font-size:12.5px}
+    .hero{padding:30px 0 40px;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{padding:26px 0}
+    .reveal{opacity:1!important;transform:none!important}
+    .mem-card,.tl-item,.ven-card,.pf-card,.imp-card,.roi-banner{break-inside:avoid;box-shadow:none}
+    .ventures,.roi-banner,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .hero .wrap{grid-template-columns:1.25fr .9fr}
+    .hero h1{font-size:34px}
+    .hero .photo .frame{width:210px}
   }
 </style>
 </head>
@@ -146,279 +220,323 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand">刘振西<span> · Zhenxi Liu</span></div>
+    <div class="brand">刘振西 <em>Zhenxi Liu</em></div>
     <div class="links">
-      <a href="#memory">记忆点</a>
-      <a href="#career">职业之路</a>
-      <a href="#startup">创业</a>
-      <a href="#invest">投资</a>
-      <a href="#projects">项目</a>
-      <a href="#contact">联系我</a>
+      <a href="#memory">认识我</a>
+      <a href="#career">职业足迹</a>
+      <a href="#ventures">创业经历</a>
+      <a href="#portfolio">投资版图</a>
+      <a href="#impact">研究与链接</a>
+      <a href="#contact">联系</a>
     </div>
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
+<!-- ================= Hero ================= -->
 <header class="hero">
   <div class="wrap">
-    <div class="avatar">振西</div>
-    <h1>你好，我是刘振西 <span class="wave">👋</span></h1>
-    <div class="tags">
-      <span class="tag c">💰 天使投资人</span>
-      <span class="tag t">🧭 技术经理人</span>
-      <span class="tag y">🎓 创业导师</span>
-      <span class="tag c">🤝 管理顾问</span>
+    <div>
+      <span class="kicker">LINK · CREATE · GROW</span>
+      <h1>你好，我是<span>刘振西</span></h1>
+      <div class="titles"><b>天使投资人</b> · <b>技术经理人</b> · <b>创业导师</b> · <b>管理顾问</b></div>
+      <div class="quote">
+        从天使投资到创新创业教育，从商务拓展到出海咨询，从行业研究到AI产业落地，始终在做一件事：<span class="hl">把优秀的人才、企业、资源链接到一起，诞生全新的愿景</span>。成人达己，美美与共！希望我们一起，把“看起来很难”的想法变成“可以试一把”的行动！
+      </div>
+      <div class="base">
+        <a class="chip primary" href="#memory">⚓ 五个关键词认识我</a>
+        <span class="chip ghost">📍 Base：长沙 / 上海</span>
+      </div>
     </div>
-    <div class="quote">
-      <p>从天使投资到创新创业教育，从商务拓展到出海咨询，从行业研究到AI产业落地，始终在做一件事：<b>把优秀的人才、企业、资源链接到一起，诞生全新的愿景。</b></p>
-      <p>成人达己，美美与共！希望我们一起，把“看起来很难”的想法变成“可以试一把”的行动！</p>
-      <div class="base">📍 我的 Base：长沙 / 上海</div>
-    </div>
-    <div class="stats">
-      <div class="stat"><b>14+</b><span>年创业与投资实战</span></div>
-      <div class="stat"><b>8 家</b><span>主导早期投资项目</span></div>
-      <div class="stat"><b>500%</b><span>投后综合 ROI</span></div>
-      <div class="stat"><b>6+ 所</b><span>高校创业导师/讲师</span></div>
-      <div class="stat"><b>2 亿+</b><span>参与创业企业年营收</span></div>
+    <div class="photo">
+      <div class="frame"><img src="assets/img/photo.jpg" alt="刘振西形象照"></div>
+      <div class="badge"><b>15+ 年</b>投资 · 创业 · 商务 · 孵化</div>
     </div>
   </div>
+  <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 C240,100 480,10 720,40 C960,70 1200,20 1440,55 L1440,90 L0,90 Z" fill="#F4F9FD" opacity="1"></path>
+    <path d="M0,72 C260,100 520,30 780,55 C1040,80 1240,40 1440,68 L1440,90 L0,90 Z" fill="#F4F9FD" opacity=".55"></path>
+  </svg>
 </header>
 
-<!-- ============ 5 个记忆点 ============ -->
-<section id="memory">
+<!-- ================= 五个记忆点 ================= -->
+<section class="memory" id="memory">
   <div class="wrap">
-    <div class="sec-title">🖐 5 个记忆点，快速认识我</div>
-    <div class="sec-sub">如果只能记住关于我的五件事，希望是这五件</div>
-    <div class="memory-grid">
-      <div class="mem">
-        <div class="no">01</div>
-        <div class="emoji">💰</div>
-        <h3>天使投资人 · 投后 ROI 500%</h3>
-        <p>启迪之星创投高级投资经理出身，主导 8 家科技型初创企业早期投资，至 2025 年底投后综合 ROI 达 500%。投早、投小、投硬科技。</p>
+    <div class="sec-head reveal">
+      <div class="en">Five Things About Me</div>
+      <h2>五个关键词，快速认识我</h2>
+      <p>数字与事实，比形容词更值得信任。</p>
+    </div>
+    <div class="mem-grid">
+      <div class="mem-card reveal">
+        <span class="no">01</span>
+        <div class="stat gold">500%<small> ROI</small></div>
+        <h3>早期投资实战派</h3>
+        <p>主导完成 8 家科技型初创企业早期投资，截至 2025 年底投后综合 ROI 达 500%。</p>
       </div>
-      <div class="mem">
-        <div class="no">02</div>
-        <div class="emoji">🦄</div>
-        <h3>创业实战派 · 从 0 做到 2 亿营收</h3>
-        <p>2011 年首次创业做富士康供应链；2017 年作为天使投资人 & 早期联创加入羊驼教育，历任商务总监、战略顾问、董事，见证年营收超 2 亿、PTE 考培市场份额全国第一。</p>
+      <div class="mem-card reveal">
+        <span class="no">02</span>
+        <div class="stat">2亿+<small> 年营收</small></div>
+        <h3>从 0 到 1 的创业者</h3>
+        <p>羊驼教育天使投资人 · 早期联合创始人，2021 年公司年营收超 2 亿元，PTE 考试培训市场份额全国第一。</p>
       </div>
-      <div class="mem">
-        <div class="no">03</div>
-        <div class="emoji">🎓</div>
-        <h3>高校双创导师</h3>
-        <p>湖南大学、湖南师范大学、长沙理工大学等高校创业讲师/评委；南华大学、湖南工业大学、中南林业科技大学受聘创业导师，辅导团队多次拿下国家级、省级双创赛事荣誉。</p>
+      <div class="mem-card reveal">
+        <span class="no">03</span>
+        <div class="stat">4<small> 大标杆平台</small></div>
+        <h3>全链条商务与投资履历</h3>
+        <p>先后供职于美团网、交通银行、微软云孵化器、启迪之星，从一线商务拓展走到早期投资。</p>
       </div>
-      <div class="mem">
-        <div class="no">04</div>
-        <div class="emoji">🌏</div>
-        <h3>出海引才联络人</h3>
-        <p>长沙国家离岸创新创业基地「长沙-新加坡工作站」负责人，协助 6 位外籍/海归人才落地长沙，获中国科协海外人才创新创业大赛优秀组织奖；现联合创办曼达润出海咨询。</p>
+      <div class="mem-card reveal">
+        <span class="no">04</span>
+        <div class="stat">AI<small> Agent 先行者</small></div>
+        <h3>技术趋势早鸟</h3>
+        <p>国内最早一批 AI Agent 初创企业（波尔鸭 AI）联合创始人 · 战略顾问，持续推动 AI 产业落地。</p>
       </div>
-      <div class="mem">
-        <div class="no">05</div>
-        <div class="emoji">🔗</div>
-        <h3>产业超级链接者</h3>
-        <p>清华大学自动化系智能无人系统产业联盟专委会秘书，为清华、北航、哈工程、华科、西交大等高校科技成果项目做评估与产业咨询，让好技术找到好场景。</p>
+      <div class="mem-card reveal">
+        <span class="no">05</span>
+        <div class="stat">6<small> 家海外人才落地</small></div>
+        <h3>链接高校与国际的架桥人</h3>
+        <p>长沙-新加坡工作站负责人；三所高校受聘创业导师；清华大学智能无人系统产业联盟专委会秘书。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 职业之路 ============ -->
-<section id="career" style="background:#fff">
+<!-- ================= 职业足迹 ================= -->
+<section id="career">
   <div class="wrap">
-    <div class="sec-title">🗺️ 职业升级之路</div>
-    <div class="sec-sub">从互联网大厂到银行，从外企孵化器到一线创投 —— 每一步都在为「链接」蓄力</div>
+    <div class="sec-head reveal">
+      <div class="en">Career Path</div>
+      <h2>职业足迹</h2>
+      <p>从一线商务到早期投资，每一步都在产业现场。</p>
+    </div>
     <div class="timeline">
-      <div class="tl-item">
-        <img src="assets/logo-meituan.png" alt="美团网">
-        <div>
-          <div class="role"><a href="https://www.meituan.com" target="_blank" rel="noopener">美团网</a> · 商务经理</div>
-          <div class="desc">互联网本地生活一线商务拓展，练就扎实的地推与商户运营功底。</div>
+      <div class="tl-item reveal">
+        <a class="tl-logo" href="https://www.meituan.com/" target="_blank" rel="noopener" title="访问美团官网"><img src="assets/logos/meituan.png" alt="美团网"></a>
+        <div style="flex:1">
+          <h3>美团网</h3>
+          <div class="role">商务经理</div>
+          <p>本地生活电商高速扩张期的一线商务历练，奠定市场化运作与商务拓展功底。</p>
         </div>
+        <a class="go" href="https://www.meituan.com/" target="_blank" rel="noopener">官网 ↗</a>
       </div>
-      <div class="tl-item">
-        <img src="assets/logo-bocom.png" alt="交通银行">
-        <div>
-          <div class="role"><a href="https://www.bankcomm.com" target="_blank" rel="noopener">交通银行</a> · 太平洋信用卡中心长沙分中心商务主任</div>
-          <div class="desc">金融场景商务合作，并作为产品开发支持工作组成员参与「买单吧 APP」建设。</div>
+      <div class="tl-item reveal">
+        <a class="tl-logo" href="https://www.bankcomm.com/" target="_blank" rel="noopener" title="访问交通银行官网"><img src="assets/logos/bankcomm.png" alt="交通银行"></a>
+        <div style="flex:1">
+          <h3>交通银行 · 太平洋信用卡中心长沙分中心</h3>
+          <div class="role">商务主任</div>
+          <p>金融产品商务拓展与渠道管理；2016 年作为“买单吧 APP”产品开发支持工作组成员，参与信用卡数字化转型早期实践。</p>
         </div>
+        <a class="go" href="https://www.bankcomm.com/" target="_blank" rel="noopener">官网 ↗</a>
       </div>
-      <div class="tl-item">
-        <img src="assets/logo-microsoft.png" alt="微软云孵化器">
-        <div>
-          <div class="role"><a href="https://azure.microsoft.com" target="_blank" rel="noopener">长沙微软云孵化器</a> · 商务经理</div>
-          <div class="desc">连接微软技术生态与本地创业团队，初识科技孵化与成果转化。</div>
+      <div class="tl-item reveal">
+        <a class="tl-logo" href="https://www.microsoft.com/zh-cn/" target="_blank" rel="noopener" title="访问微软官网"><img src="assets/logos/microsoft.png" alt="微软云孵化器"></a>
+        <div style="flex:1">
+          <h3>长沙微软云孵化器</h3>
+          <div class="role">商务经理</div>
+          <p>进入科技企业孵化领域，服务云计算方向的早期创业团队，完成从“商务人”到“孵化人”的转身。</p>
         </div>
+        <a class="go" href="https://www.microsoft.com/zh-cn/" target="_blank" rel="noopener">官网 ↗</a>
       </div>
-      <div class="tl-item">
-        <img src="assets/logo-tusstar.png" alt="启迪之星">
-        <div>
-          <div class="role"><a href="https://www.tusstar.com" target="_blank" rel="noopener">启迪之星（长沙 / 衡阳）</a> · 商务经理 → 投资总监 → 创投高级投资经理</div>
-          <div class="desc">从孵化服务到早期投资，主导 8 家科技初创投资，完成与三一集团、中车株所等产业加速营合作，牵头编撰《机器人行业调研报告》《企业服务标准手册》。</div>
+      <div class="tl-item reveal">
+        <a class="tl-logo" href="https://www.tusstar.com/" target="_blank" rel="noopener" title="访问启迪之星官网"><img src="assets/logos/tusstar.png" alt="启迪之星"></a>
+        <div style="flex:1">
+          <h3>启迪之星</h3>
+          <div class="role">长沙商务经理 → 长沙投资总监 → 衡阳商务拓展总监 → 启迪之星创投高级投资经理</div>
+          <p>六年深耕孵化与投资一线：主导 8 家科技企业早期投资，完成与三一集团、中车株所等产业加速营合作，编撰《机器人行业调研报告》《企业服务标准手册》。</p>
         </div>
+        <a class="go" href="https://www.tusstar.com/" target="_blank" rel="noopener">官网 ↗</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 创业经历 ============ -->
-<section id="startup">
+<!-- ================= 创业经历 ================= -->
+<section class="ventures" id="ventures">
   <div class="wrap">
-    <div class="sec-title">🚀 我的创业副本</div>
-    <div class="sec-sub">五次出发，五次升级 —— 创业是我最熟悉的语言（点击有官网的企业可直达）</div>
-    <div class="logo-grid">
-      <div class="logo-card">
-        <div class="ph">保励</div>
-        <b>衡阳保励工业科技</b>
-        <small>联合创始人 · 2011</small>
-        <small>富士康一级供应商 · 供应链搭建</small>
+    <div class="sec-head reveal">
+      <div class="en">Entrepreneurship</div>
+      <h2>创业经历</h2>
+      <p>五次出发，从供应链到教育、从 AI 到出海咨询。</p>
+    </div>
+    <div class="ven-grid">
+      <div class="ven-card reveal">
+        <div class="ven-top">
+          <div class="ven-logo initial">保</div>
+          <div><div class="year">2011</div><h3>衡阳保励工业科技有限公司</h3><div class="myrole">联合创始人</div></div>
+        </div>
+        <p>富士康集团一级供应商，向厂家供应设备与零配件，主要负责供应链体系搭建。</p>
       </div>
-      <a class="logo-card" href="https://www.ytaxx.com" target="_blank" rel="noopener">
-        <img src="assets/logo-yangtuo.png" alt="羊驼教育">
-        <b>羊驼教育</b>
-        <small>天使投资人 · 早期联创 · 2017</small>
-        <small>年营收超 2 亿 · PTE 考培全国第一</small>
-        <span class="visit">访问官网 ↗</span>
-      </a>
-      <a class="logo-card" href="https://agent.ineurontech.com" target="_blank" rel="noopener">
-        <img src="assets/logo-boerya.png" alt="波尔鸭AI">
-        <b>神经元智能 / 波尔鸭 AI</b>
-        <small>联合创始人 · 战略顾问 · 2023</small>
-        <small>国内最早一批 AI Agent 初创</small>
-        <span class="visit">访问官网 ↗</span>
-      </a>
-      <div class="logo-card">
-        <div class="ph">UM</div>
-        <b>UM 大创工作室 / UM 科创</b>
-        <small>联合创始人 · 2025</small>
-        <small>高校创新创业学院合作 · 创业教育体系</small>
+      <div class="ven-card reveal">
+        <div class="ven-top">
+          <a class="ven-logo" href="https://www.yangtuoedu.com/" target="_blank" rel="noopener"><img src="assets/logos/yangtuo.png" alt="羊驼教育"></a>
+          <div><div class="year">2017</div><h3>湖南羊驼教育科技有限公司</h3><div class="myrole">天使投资人 · 早期联合创始人</div></div>
+        </div>
+        <p>先后担任商务总监、战略发展顾问、董事；至 2021 年公司年营收超 2 亿元，达成 PTE 考试培训市场份额全国第一。</p>
+        <a class="go" href="https://www.yangtuoedu.com/" target="_blank" rel="noopener">访问官网 ↗</a>
       </div>
-      <div class="logo-card">
-        <img src="assets/logo-mandareach.jpg" alt="曼达润出海咨询">
-        <b>曼达润出海咨询 MandaReach</b>
-        <small>合伙人 · 2025</small>
-        <small>出海商务洽谈 · 出海策略规划</small>
+      <div class="ven-card reveal">
+        <div class="ven-top">
+          <a class="ven-logo" href="https://hookai.cn/" target="_blank" rel="noopener"><img src="assets/logos/hookai.png" alt="波尔鸭 AI"></a>
+          <div><div class="year">2023</div><h3>神经元智能 / 波尔鸭人工智能</h3><div class="myrole">联合创始人 · 战略顾问</div></div>
+        </div>
+        <p>国内最早一批开发 AI Agent 的初创企业；协助完善市场拓展策略、早期团队搭建，并完成核心技术人员招聘。</p>
+        <a class="go" href="https://hookai.cn/" target="_blank" rel="noopener">访问官网 ↗</a>
+      </div>
+      <div class="ven-card reveal">
+        <div class="ven-top">
+          <div class="ven-logo"><img src="assets/logos/mandareach.jpg" alt="曼达润出海咨询"></div>
+          <div><div class="year">2025</div><h3>曼达润出海咨询 MandaReach</h3><div class="myrole">联合创始人 · 合伙人</div></div>
+        </div>
+        <p>专注企业出海服务，负责出海企业商务洽谈与沟通、出海策略规划。</p>
+      </div>
+      <div class="ven-card reveal">
+        <div class="ven-top">
+          <div class="ven-logo initial">UM</div>
+          <div><div class="year">2025</div><h3>艾道教育 · UM 大创工作室 / UM 科创</h3><div class="myrole">联合创始人</div></div>
+        </div>
+        <p>负责高校创新创业学院合作拓展、创业教育课程体系搭建与创业项目专项辅导。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 投资版图 ============ -->
-<section id="invest" style="background:#fff">
+<!-- ================= 投资版图 ================= -->
+<section id="portfolio">
   <div class="wrap">
-    <div class="sec-title">💎 主导投资的小伙伴</div>
-    <div class="sec-sub">2019–2025 年主导完成 8 家科技型初创企业早期投资，投后综合 ROI 达 500%</div>
-    <div class="logo-grid">
-      <a class="logo-card" href="https://www.zhaoguang.com" target="_blank" rel="noopener">
-        <img src="assets/logo-zhaoguang.png" alt="找广科技">
-        <b>找广科技</b>
-        <small>广告产业互联网平台</small>
-        <span class="visit">访问官网 ↗</span>
+    <div class="sec-head reveal">
+      <div class="en">Investment Portfolio</div>
+      <h2>投资版图</h2>
+      <p>启迪之星创投期间主导投资的 8 家科技型初创企业（2019–2025）。</p>
+    </div>
+    <div class="roi-banner reveal">
+      <div class="num">500%</div>
+      <div class="txt">
+        <b>投后综合 ROI（截至 2025 年底）</b>
+        <span>覆盖广告技术、生物科技、工业软件、新材料、人工智能等赛道，同期完成与三一集团、中车株所等产业加速营合作。</span>
+      </div>
+    </div>
+    <div class="pf-grid">
+      <a class="pf-card reveal" href="https://www.zhaoguang.com/" target="_blank" rel="noopener">
+        <div class="logo"><img src="assets/logos/zhaoguang.png" alt="找广科技"></div>
+        <b>找广科技</b><span>户外广告产业互联网</span><div class="ext">官网 ↗</div>
       </a>
-      <div class="logo-card">
-        <img src="assets/logo-bobi.png" alt="波比生物">
-        <b>波比生物</b>
-        <small>生物科技</small>
-      </div>
-      <a class="logo-card" href="https://www.mailisoft.com" target="_blank" rel="noopener">
-        <img src="assets/logo-maili.png" alt="麦粒软件">
-        <b>麦粒软件</b>
-        <small>国产自主 CAE 工业软件</small>
-        <span class="visit">访问官网 ↗</span>
+      <a class="pf-card reveal" href="https://www.mailisoft.com/" target="_blank" rel="noopener">
+        <div class="logo"><img src="assets/logos/mailisoft.png" alt="麦粒软件"></div>
+        <b>麦粒软件</b><span>工程建设 CAE 工业软件</span><div class="ext">官网 ↗</div>
       </a>
-      <div class="logo-card">
-        <img src="assets/logo-xiangfeng.png" alt="湘风文化">
-        <b>湘风文化</b>
-        <small>文化创意</small>
+      <a class="pf-card reveal" href="https://www.chnxf.com/" target="_blank" rel="noopener">
+        <div class="logo"><img src="assets/logos/chnxf.png" alt="湘风文化"></div>
+        <b>湘风文化</b><span>湘绣非遗数字化</span><div class="ext">官网 ↗</div>
+      </a>
+      <a class="pf-card reveal" href="https://www.jubond.com/" target="_blank" rel="noopener">
+        <div class="logo"><img src="assets/logos/jubond.png" alt="巨擘科技"></div>
+        <b>巨擘科技</b><span>智慧用电与电气安全</span><div class="ext">官网 ↗</div>
+      </a>
+      <div class="pf-card reveal">
+        <div class="logo"><img src="assets/logos/bobby.png" alt="波比生物科技"></div>
+        <b>波比生物</b><span>宠物生物技术研发</span>
       </div>
-      <div class="logo-card">
-        <img src="assets/logo-jubo.png" alt="巨擘科技">
-        <b>巨擘科技</b>
-        <small>科技初创</small>
+      <div class="pf-card reveal">
+        <div class="logo"><img src="assets/logos/qinghe.jpg" alt="清河新材料"></div>
+        <b>清河新材料</b><span>先进材料研发制造</span>
       </div>
-      <div class="logo-card">
-        <img src="assets/logo-qinghe.jpg" alt="清河新材料">
-        <b>清河新材料</b>
-        <small>新材料</small>
+      <div class="pf-card reveal">
+        <div class="logo"><img src="assets/logos/zunshi.jpg" alt="樽势科技"></div>
+        <b>樽势科技（上海）</b><span>智能科技与创新服务</span>
       </div>
-      <div class="logo-card">
-        <img src="assets/logo-zunshi.jpg" alt="樽势科技">
-        <b>樽势科技（上海）</b>
-        <small>科技初创</small>
-      </div>
-      <div class="logo-card">
-        <img src="assets/logo-kefu.jpg" alt="柯孚新材料">
-        <b>柯孚新材料</b>
-        <small>新材料</small>
+      <div class="pf-card reveal">
+        <div class="logo"><img src="assets/logos/kefu.jpg" alt="柯孚新材料"></div>
+        <b>柯孚新材料</b><span>新材料科技</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 高光项目 ============ -->
-<section id="projects">
+<!-- ================= 研究与链接 ================= -->
+<section class="impact" id="impact">
   <div class="wrap">
-    <div class="sec-title">✨ 高光项目时刻</div>
-    <div class="sec-sub">工作之外，那些让我特别有成就感的「支线任务」</div>
-    <div class="hl-grid">
-      <div class="hl">
-        <span class="badge">2023 – 2025</span>
-        <h3>🎓 清华大学自动化系智能无人系统产业联盟 · 专委会秘书（兼任）</h3>
+    <div class="sec-head reveal">
+      <div class="en">Research & Connection</div>
+      <h2>行业研究与资源链接</h2>
+      <p>把产业洞察、高校成果与国际资源，链接成真实的行动。</p>
+    </div>
+    <div class="imp-grid">
+      <div class="imp-card reveal">
+        <div class="icon">🎓</div>
+        <h3>清华大学自动化系智能无人系统产业联盟</h3>
+        <div class="when">专委会秘书（兼任）· 2023 – 2025</div>
         <p>为清华大学、北京航空航天大学、哈尔滨工程大学、华中科技大学、西安交通大学等多所高校科技成果项目开展项目评估与产业咨询。</p>
       </div>
-      <div class="hl">
-        <span class="badge">2022 – 2025</span>
-        <h3>🌏 长沙国家离岸创新创业基地 ·「长沙-新加坡工作站」负责人</h3>
-        <p>2022 年协办中国科协海外人才创新创业大赛并获优秀组织奖；运营期间成功协助 6 位外籍/海归人才落地长沙。</p>
+      <div class="imp-card reveal">
+        <div class="icon">🌏</div>
+        <h3>长沙国家离岸创新创业基地</h3>
+        <div class="when">“长沙-新加坡工作站”负责人 · 2022 – 2025</div>
+        <ul>
+          <li>2022 年协办中国科协海外人才创新创业大赛，获“优秀组织奖”</li>
+          <li>运营期间成功协助 6 家外籍 / 海归人才企业落地长沙</li>
+        </ul>
       </div>
-      <div class="hl">
-        <span class="badge">2019 – 2025</span>
-        <h3>🏭 产业加速营合作 · 三一集团 & 中车株所</h3>
-        <p>推动初创企业与产业龙头深度对接；牵头编撰启迪之星总部《机器人行业调研报告》《企业服务标准手册》。</p>
+      <div class="imp-card reveal">
+        <div class="icon">📊</div>
+        <h3>行业研究与产业加速</h3>
+        <div class="when">启迪之星 · 2019 – 2025</div>
+        <ul>
+          <li>主导编撰《机器人行业调研报告》《企业服务标准手册》</li>
+          <li>完成与三一集团、中车株所等产业加速营合作项目</li>
+        </ul>
       </div>
-      <div class="hl">
-        <span class="badge">2016</span>
-        <h3>💳 交通银行「买单吧 APP」· 产品开发支持工作组成员</h3>
-        <p>参与信用卡核心移动产品建设，亲历金融数字化转型一线。</p>
+      <div class="imp-card reveal">
+        <div class="icon">🏫</div>
+        <h3>高校创新创业教育</h3>
+        <div class="when">创业导师 / 讲师 / 评委</div>
+        <ul>
+          <li>南华大学、湖南工业大学、中南林业科技大学受聘创业导师</li>
+          <li>湖南大学、湖南师范大学、长沙理工大学创业就业讲师 / 评委</li>
+          <li>多次辅导高校团队在国家级、省级创新创业赛事获奖</li>
+        </ul>
+      </div>
+      <div class="imp-card reveal">
+        <div class="icon">🤝</div>
+        <h3>社会职务</h3>
+        <div class="when">湖南湘江新区（岳麓区）侨联新侨创新创业联盟</div>
+        <p>副秘书长 · 理事，服务新侨创新创业生态，链接侨界人才与产业资源。</p>
+      </div>
+      <div class="imp-card reveal">
+        <div class="icon">📜</div>
+        <h3>专业资质与荣誉</h3>
+        <div class="when">持续精进的技术经理人</div>
+        <ul>
+          <li>清华大学继续教育学院“技术转移转化能力提升研修班”结业（2023）</li>
+          <li>湖南省技术经理人培训班结业（2019）</li>
+          <li>中国（长沙）海外人才创新创业项目大赛“优秀组织奖”（2022）</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 更多身份 ============ -->
-<section id="identity" style="background:#fff">
-  <div class="wrap">
-    <div class="sec-title">🎭 更多身份徽章</div>
-    <div class="sec-sub">斜杠人生，每一面都是认真的</div>
-    <div class="chip-wall">
-      <div class="chip">🎓 <b>南华大学</b> 创业导师</div>
-      <div class="chip">🎓 <b>湖南工业大学</b> 创新创业导师</div>
-      <div class="chip">🎓 <b>中南林业科技大学</b> 校外创业导师</div>
-      <div class="chip">🏛️ 湘江新区侨联新侨双创联盟 <b>副秘书长 / 理事</b></div>
-      <div class="chip">🏆 中国（长沙）海外人才双创大赛 <b>优秀组织奖</b></div>
-      <div class="chip">📜 清华大学继续教育学院 <b>技术转移转化研修班</b></div>
-      <div class="chip">📜 湖南省 <b>技术经理人</b></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ Footer ============ -->
+<!-- ================= 页脚 ================= -->
 <footer id="contact">
   <div class="wrap">
-    <div class="cta">把「看起来很难」的想法<br>变成<span>「可以试一把」</span>的行动</div>
-    <p>如果你正在创业、准备出海、寻求融资，或只是想聊聊一个还很不成熟的想法 —— 欢迎来链接。</p>
-    <p style="margin-top:10px">📍 Base：长沙 / 上海</p>
-    <div class="foot-links">
-      <a href="#memory">认识我</a>·
-      <a href="#career">职业之路</a>·
-      <a href="#startup">创业</a>·
-      <a href="#invest">投资</a>·
-      <a href="#projects">项目</a>
+    <div class="quote">
+      “从天使投资到创新创业教育，从商务拓展到出海咨询，从行业研究到 AI 产业落地，始终在做一件事：<span class="hl">把优秀的人才、企业、资源链接到一起，诞生全新的愿景。</span>成人达己，美美与共！希望我们一起，把‘看起来很难’的想法变成‘可以试一把’的行动！”
     </div>
-    <div class="copy">© 2026 刘振西 · 成人达己，美美与共</div>
+    <div class="base">📍 Base：长沙 / 上海</div>
+    <div class="nav2">
+      <a href="#memory">认识我</a><a href="#career">职业足迹</a><a href="#ventures">创业经历</a><a href="#portfolio">投资版图</a><a href="#impact">研究与链接</a>
+    </div>
+    <div class="copy">© <span id="yr">2026</span> 刘振西 Zhenxi Liu · 天使投资人 / 技术经理人 / 创业导师 / 管理顾问</div>
   </div>
 </footer>
 
+<script>
+  // 滚动渐入
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // 年份
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
