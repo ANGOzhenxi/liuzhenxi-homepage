@@ -201,6 +201,13 @@
   footer .quote .hl{color:var(--gold);font-weight:700}
   footer .base{display:inline-block;padding:10px 26px;border:1px solid rgba(127,201,239,.4);border-radius:999px;
     color:var(--sea-300);font-size:15px;letter-spacing:2px;margin-bottom:34px}
+  .contact-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:36px}
+  .c-card{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);
+    border:1px solid rgba(127,201,239,.28);border-radius:14px;padding:13px 24px;color:#EAF5FD;
+    text-decoration:none;font-size:15px;transition:background .2s,transform .2s}
+  .c-card:hover{background:rgba(255,255,255,.13);transform:translateY(-2px)}
+  .c-card .ic{font-size:18px}
+  .c-card b{color:var(--sea-300);font-weight:600}
   footer .nav2{margin-bottom:26px}
   footer .nav2 a{color:#A9C8E2;text-decoration:none;margin:0 12px;font-size:14px}
   footer .nav2 a:hover{color:#fff}
@@ -533,6 +540,11 @@
       “从天使投资到创新创业教育，从商务拓展到出海咨询，从行业研究到 AI 产业落地，始终在做一件事：<span class="hl">把优秀的人才、企业、资源链接到一起，诞生全新的愿景。</span>成人达己，美美与共！希望我们一起，把‘看起来很难’的想法变成‘可以试一把’的行动！”
     </div>
     <div class="base">📍 Base：长沙 / 上海</div>
+    <div class="contact-row">
+      <a class="c-card" href="tel:+8618684919723"><span class="ic">📞</span><span>手机&nbsp;&nbsp;<b>+86 186 8491 9723</b></span></a>
+      <a class="c-card" href="mailto:angghost@163.com"><span class="ic">📧</span><span>邮箱&nbsp;&nbsp;<b>angghost@163.com</b></span></a>
+      <a class="c-card" href="javascript:void(0)" onclick="navigator.clipboard&&navigator.clipboard.writeText('Angghost');var b=this.querySelector('b'),t=b.textContent;b.textContent='已复制 ✓';setTimeout(function(){b.textContent=t},1600)" title="点击复制微信号"><span class="ic">💬</span><span>微信&nbsp;&nbsp;<b>Angghost</b></span></a>
+    </div>
     <div class="nav2">
       <a href="#memory">认识我</a><a href="#career">职业足迹</a><a href="#ventures">创业经历</a><a href="#portfolio">投资版图</a><a href="#impact">研究与链接</a>
     </div>
